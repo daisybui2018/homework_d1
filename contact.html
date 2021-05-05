@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    input[type=text],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    input[type=submit] {
+      background-color: #000;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #000;
+    }
+
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <div style="margin-bottom: 15px;">
+      <a href="index.html" style="font-size: 16px; font-weight: bold;color:#810e0e;padding-right: 20px;">TRANG CHỦ</a>
+      <a href="about.html" style="font-size: 16px; font-weight: bold;color:#810e0e;padding-right: 20px;">GIỚI THIỆU</a>
+    </div>
+    <h3>Liên Hệ</h3>
+  </center>
+  <div class="container" style="width: 900px; margin:auto">
+    <form action="/index.html">
+      <label for="fname">Họ</label>
+      <input type="text" id="fname" name="firstname" placeholder="Họ..">
+
+      <label for="lname">Tên</label>
+      <input type="text" id="lname" name="lastname" placeholder="Tên..">
+
+      <label for="country">Đất nước</label>
+      <select id="country" name="country">
+        <option value="Viet nam">Việt Nam</option>
+        <option value="Trung quoc">Trung Quốc</option>
+        <option value="My">Mỹ</option>
+      </select>
+
+      <label for="subject">Ghi chú</label>
+      <textarea id="subject" name="subject" placeholder="Ghi chú.." style="height:200px"></textarea>
+
+      <input type="submit" value="Gửi">
+    </form>
+  </div>
+
+</body>
+
+</html>
