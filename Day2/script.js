@@ -1,4 +1,4 @@
-console.log("RUN SCRIPT");
+console.log("RUN SCRIPT cucbk");
 
 // Đổi style của tiêu đề Our companies thành chữ in đậm và kích thước 32px
 // Gợi ý: Sử dụng .style.fontWeight và .style.fontSize
