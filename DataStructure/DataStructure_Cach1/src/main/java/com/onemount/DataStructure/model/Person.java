@@ -37,4 +37,16 @@ public class Person {
     public void setEvaluation(String evaluation) {
         this.evaluation = evaluation;
     }
+
+//    @Override
+//    public String toString() {
+//        String s = "";
+//        s = "- " + name + " - " + nationality + " - " + age;
+//        if(evaluation != null){
+//            s += " - " + evaluation + "\n";
+//        }else {
+//            s += "\n";
+//        }
+//        return s;
+//    }
 }

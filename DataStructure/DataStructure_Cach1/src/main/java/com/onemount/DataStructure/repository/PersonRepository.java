@@ -53,6 +53,14 @@ public class PersonRepository {
     public List<Person> getPersonOver25(){
         return people.stream().sorted(Comparator.comparing((Person::getAge)).reversed()).filter(person -> {return (person.getAge() > 25) ? true : false;}).toList();
     }
+    public String getPersonOver25Copy(){
+        people = people.stream().sorted(Comparator.comparing((Person::getAge)).reversed()).filter(person -> {return (person.getAge() > 25) ? true : false;}).toList();
+        String s = "";
+        for (Person p:people) {
+            s += people.toString();
+        }
+        return s;
+    }
     //1.3 Tính trung bình tuổi của người theo từng quốc gia
     public Map<String, Double> averageAgePerNationality() {
         return people
