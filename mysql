@@ -1,0 +1,25 @@
+#Hãy tìm tất cả những nam giới tuổi dưới 45
+SELECT p.name, p.email, p.job, p.gender, p.city, p.salary, p.age
+FROM (SELECT name, email, job, gender, city, salary, DATE_FORMAT(FROM_DAYS(DATEDIFF(now(),birthdate)), '%Y')+0 AS age FROM sys.person) AS p
+WHERE p.gender="Female" and p.age <45
+
+#Hãy tìm tất cả những nữ giới làm nghề lái xe 'driver'
+SELECT*
+FROM sys.person
+WHERE gender = "Female" and job = "driver"
+
+#Tính tỷ lệ nam/nữ lập trình viên trong tất cả tập dữ liệu
+SELECT m.job, m.malecount/f.femaleCount FROM 
+(SELECT gender, job, COUNT(*) AS femaleCount 
+FROM sys.person WHERE gender = 'Female' and job = 'developer') AS f
+JOIN 
+(SELECT gender, job, COUNT(*) AS malecount 
+FROM sys.person WHERE gender = 'Male' and job = 'developer') AS m ON f.job = m.job
+
+#Hãy tìm 5 thành phố có số lượng nữ lớn nhất
+SELECT city, COUNT(*) AS femaleCount 
+FROM sys.person 
+WHERE gender = 'Female' 
+GROUP BY city
+ORDER BY femaleCount DESC
+LIMIT 5
