@@ -6,7 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="JavaCoreTest" />
         <module name="CucBK" />
+        <module name="FinalExam1" />
       </profile>
     </annotationProcessing>
   </component>
