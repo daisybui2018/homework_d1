@@ -1,5 +1,7 @@
 package Task;
 
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 /**
@@ -16,12 +18,22 @@ public class Task5 {
 
     public Set<Integer> createSet() {
         //write your code here
-        return null;
+        Set<Integer> result = new HashSet<Integer>();
+        for (int i = 5; i < 15; i++) {
+            result.add(i);
+        }
+        return result;
     }
     public Set<Integer> removeAllNumbersGreaterThan10(Set<Integer> set) {
         //write your code here
-
-        return null;
+        Iterator<Integer> iterator = set.iterator();
+        while (iterator.hasNext()) {
+            Integer i = iterator.next();
+            if (i > 10) {
+                iterator.remove();
+            }
+        }
+        return set;
     }
 
 }

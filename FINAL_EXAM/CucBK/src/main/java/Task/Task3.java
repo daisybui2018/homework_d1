@@ -1,5 +1,7 @@
 package Task;
 
+import java.util.Scanner;
+
 /**
  * Write a method readString that reads a string from the keyboard.
  *
@@ -21,18 +23,31 @@ package Task;
 public class Task3 {
     public String readString()  {
         //write your code here
-
-        return null;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Input: ");
+        String line = sc.nextLine();
+        sc.close();
+        return line;
     }
 
     public String upperCaseString (String s){
         //write your code here
-
-        return null;
+        StringBuilder output = new StringBuilder();
+        s.trim();
+        String array[] = s.split("\\s+");
+        for(int i = 0; i < array.length; i++){
+            String temp = String.valueOf(array[i].charAt(0));
+            output.append(temp.toUpperCase() + array[i].substring(1));
+            output.append(' ');
+        }
+        return output.toString().trim();
     }
 
     public static void main(String[] args) {
         //write your code here
+        Task3 task = new Task3();
+        String input = task.readString();
+        System.out.printf("Output: %s\n", task.upperCaseString(input));
     }
 
 }
