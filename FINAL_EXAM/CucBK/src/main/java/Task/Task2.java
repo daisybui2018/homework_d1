@@ -27,6 +27,7 @@ public class Task2 {
         Set<Cat> catSet1 = new HashSet<>();
         catSet1 = t2.convertMapToSet(catMap1);
         t2.printCats(catSet1);
+
     }
 
     public Map<Integer,Cat> createMap() {
